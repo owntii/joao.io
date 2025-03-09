@@ -30,7 +30,7 @@ const perguntas = [
     },
     {
         pergunta: "o joao se arrepende de tudo oq ele falou e quer ter a livia da silva de volta?",
-        respostaSim: "quero, desculpa livia, sou um babaca, merda, bosta, lixo",
+        respostaSim: "me perdoa livia",
         respostaNao: " me arrependo si, desculpa"
     }
 ];
@@ -152,7 +152,7 @@ function mostrarCarta() {
     const carta = document.createElement('div');
     carta.classList.add('carta');
     carta.innerHTML = `
-        <p>oi livia piton, me perdoa por favo, eu gosto muito de voce, quero que a gente de certo, quero te namora, quero faze um milhao de coisas com voce, agi igual um primata, desculpa</p>
+        <p>oi livia piton, me perdoa por favo, eu gosto muito de voce, quero que a gente de certo, to planejando nosso futuro, a gente vai ter 2 filho, vai ser o frank e o ocean, e vamos ter o max de pet e a yuna tambem, agi igual um primata, desculpa</p>
         <p>💜<p>
     `;
     document.body.appendChild(carta);
