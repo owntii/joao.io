@@ -1,0 +1,271 @@
+/* Estilos gerais para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6a0dad; /* Fundo roxo */
+    position: relative; /* Para poder posicionar os corações */
+}
+
+/* Estilo para o quadrado */
+.quadrado {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Para o quadrado ter relação com os corações */
+    z-index: 2; /* Garante que o quadrado ficará acima dos corações */
+}
+
+/* Estilo para a caixa de texto */
+.quadrado input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a089d;
+}
+
+/* Estilo para a mensagem de feedback */
+#mensagem {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Estilo para os corações pixelados */
+.pixel-block {
+    position: absolute;
+    width: 6em;
+    height: 5em;
+}
+
+.pixelized--heart {
+    display: block;
+    width: 1em;
+    height: 1em;
+    box-shadow:
+        1em 0em #F22613,
+        2em 0em #F22613,
+        4em 0em #F22613,
+        5em 0em #F22613,
+
+        0em 1em #F22613,
+        1em 1em #F22613,
+        2em 1em #F22613,
+        3em 1em #F22613,
+        4em 1em #F22613,
+        5em 1em #F22613,
+        6em 1em #F22613,
+
+        0em 2em #F22613,
+        1em 2em #F22613,
+        2em 2em #F22613,
+        3em 2em #F22613,
+        4em 2em #F22613,
+        5em 2em #F22613,
+        6em 2em #F22613,
+
+        1em 3em #F22613,
+        2em 3em #F22613,
+        3em 3em #F22613,
+        4em 3em #F22613,
+        5em 3em #F22613,
+
+        2em 4em #F22613,
+        3em 4em #F22613,
+        4em 4em #F22613,
+
+        3em 5em #F22613;
+}
+
+/* Corações espalhados pela tela */
+.coracao {
+    position: absolute;
+    width: 6em;
+    height: 5em;
+    transform: translate(-50%, -50%);
+}
+
+.coracao:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.coracao:nth-child(2) {
+    top: 20%;
+    left: 30%;
+}
+
+.coracao:nth-child(3) {
+    top: 50%;
+    left: 40%;
+}
+
+.coracao:nth-child(4) {
+    top: 70%;
+    left: 60%;
+}
+
+.coracao:nth-child(5) {
+    top: 10%;
+    left: 70%;
+}
+
+.coracao:nth-child(6) {
+    top: 40%;
+    left: 80%;
+}
+
+.coracao:nth-child(7) {
+    top: 80%;
+    left: 20%;
+}
+
+.coracao:nth-child(8) {
+    top: 60%;
+    left: 50%;
+}
+
+.coracao:nth-child(9) {
+    top: 30%;
+    left: 50%;
+}
+
+.coracao:nth-child(10) {
+    top: 50%;
+    left: 20%;
+}
+
+.coracao:nth-child(11) {
+    top: 80%;
+    left: 50%;
+}
+
+.coracao:nth-child(12) {
+    top: 40%;
+    left: 10%;
+}
+
+/* Adicionando mais corações à direita e separando mais */
+.coracao:nth-child(13) {
+    top: 25%;
+    left: 85%; /* Posicionando mais para a direita */
+}
+
+.coracao:nth-child(14) {
+    top: 45%;
+    left: 90%; /* Posicionando mais para a direita */
+}
+
+.coracao:nth-child(15) {
+    top: 65%;
+    left: 95%; /* Posicionando mais para a direita */
+}
+
+.coracao:nth-child(16) {
+    top: 35%;
+    left: 75%; /* Posicionando mais à direita e mais distante */
+}
+
+.coracao:nth-child(17) {
+    top: 55%;
+    left: 85%; /* Posicionando mais para a direita */
+}
+
+
+/* Estilo para a carta que aparecerá depois de os corações sumirem */
+.carta {
+    position: fixed; /* Usando fixed para garantir que a carta fique no centro da tela, independentemente do scroll */
+    transform: translate(-50%, -50%) scale(0); /* Garante que a carta esteja sempre centralizada */
+    opacity: 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    color: #333;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.carta p {
+    margin: 20px 0;
+}
+
+.carta p strong {
+    font-size: 22px;
+    color: #6a0dad;
+}
+
+
+/* Ajuste para os botões */
+button {
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%; /* Garante que os botões fiquem lado a lado com o espaço adequado */
+}
+
+button:hover {
+    background-color: #5a089d;
+}
+
+/* Estilo do quadrado onde as perguntas e respostas aparecem */
+.quadrado {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo dentro do quadrado */
+    margin: 0 auto; /* Garante que o quadrado está centralizado na tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animação para o quadrado desaparecer */
+.animar-quadrado {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 5s ease, transform 5s ease;
+}
+
+/* Animação para os corações desaparecerem */
+.animar-coracao {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
